@@ -1,37 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 user-scalable=no"
+    />
+    <!-- displays site properly based on user's device -->
+    <meta
+      name="description"
+      content="Access millions of songs, audiobooks and podcasts on any device for just $59.99/year!  💰"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Order summary card</title>
+  </head>
+  <body>
+    <main>
+      <article class="container">
+        <div class="card">
+          <img
+            class="card__hero"
+            src="./images/illustration-hero.svg"
+            alt="lady dancing to music"
+          />
+          <div class="card__content">
+            <h1 class="card__title">Order Summary</h1>
+            <p class="card__description">
+              You can now listen to millions of songs, audiobooks, and podcasts
+              on any device anywhere you like!
+            </p>
+            <div class="card__banner">
+              <img
+                class="banner__icon"
+                src="./images/icon-music.svg"
+                alt="annual plan artwork"
+              />
+              <div class="banner__content">
+                <p class="banner__title">Annual Plan</p>
+                <p class="banner__subtitle">$59.99/year</p>
+              </div>
+              <button class="banner__action prevent-select">
+                <p>Change</p>
+              </button>
+            </div>
+            <button class="card__button prevent-select">
+              <p>Proceed to Payment</p>
+            </button>
+            <button class="card__button--secondary prevent-select">
+              <p>Cancel Order</p>
+            </button>
+          </div>
+        </div>
+      </article>
+    </main>
+    <footer>
+      <p class="footer__credits">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a
+          href="https://github.com/hliejun/frontend-learning-group"
+          target="_blank"
+          >Larry</a
+        >.
+      </p>
+    </footer>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Order summary card</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Order Summary
-
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
-
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <script>
+      document.body.onkeyup = function (e) {
+        if (e.key == " " || e.code == "Space" || e.keyCode == 32) {
+          document.documentElement.classList.toggle("dark");
+        }
+      };
+    </script>
+  </body>
 </html>
