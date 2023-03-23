@@ -304,6 +304,48 @@ main {
   }
 }
 
+/* light mode */
+@media (prefers-color-scheme: light) {
+  :root {
+    /* themeable */
+    --box-shadow: 0px 40px 40px -20px #0d30bd27;
+    --box-shadow--button: 0px 20px 20px #382ae131;
+    --background-blend: normal;
+    --color-bg: #e0e8ff;
+    --color-fg: #ffffff;
+    --color-highlight: #f7f9ff;
+    --color-action: #382ae1;
+    --color-action--active: #766cf1;
+    --color-txt-pri: #1f2e55;
+    --color-txt-sec: #717fa6;
+    --color-link: #1aa5b2;
+    --color-link-hover: #20dbd8;
+    --color-link-active: #126c79;
+    --color-link-visited: #9a93b8;
+  }
+}
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* themeable */
+    --box-shadow: 0px 40px 40px -20px #00000031;
+    --box-shadow--button: 0px 20px 20px #bf843327;
+    --background-blend: multiply;
+    --color-bg: #1e3a4c;
+    --color-fg: #332c39;
+    --color-highlight: #4d455d;
+    --color-action: #f2cd5c;
+    --color-action--active: #f0a04b;
+    --color-txt-pri: #ffffff;
+    --color-txt-sec: #dbe5eb;
+    --color-link: #1aa5b2;
+    --color-link-hover: #20dbd8;
+    --color-link-active: #126c79;
+    --color-link-visited: #9a93b8;
+  }
+}
+
 /* FOOTER */
 
 footer {
