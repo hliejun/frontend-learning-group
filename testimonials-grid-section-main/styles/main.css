@@ -1,0 +1,372 @@
+/* CSS Variables
+========================================================================== */
+
+:root {
+  --gap-l: 3.2rem;
+  --gap-m: 2.4rem;
+  --gap-s: 1.6rem;
+
+  --text-semibold: 700;
+  --text-medium: 500;
+
+  --text-l: 2rem;
+  --text-m: 1.3rem;
+  --text-s: 1.1rem;
+
+  --height-l: 120%;
+  --height-m: 138%;
+  --height-s: 100%;
+
+  --image-width-l: 3.6rem;
+  --image-width-m: 3.2rem;
+  --image-width-s: 2.8rem;
+
+  --radius-round: 50%;
+  --radius-m: 0.8rem;
+
+  --border-s: 2px;
+
+  --color-bg: #ecf2f8;
+  --color-fg: #ffffff;
+  --color-fg-medium: #48556a;
+  --color-fg-mute: #332c39;
+  --color-fg-highlight: #733fc8;
+
+  --box-shadow: 40px 60px 50px -47px #48556a33;
+
+  --color-highlight: #f7f9ff;
+  --color-action: #382ae1;
+  --color-action--active: #766cf1;
+
+  --color-txt-highlight: #ffffff;
+  --color-txt-light: #ffffff;
+  --color-txt-mute: #ffffff;
+  --color-txt-dark: #48556a;
+  --color-txt-footer: #48556a;
+
+  --opacity-txt-pri: 1;
+  --opacity-txt-sec: 0.7;
+  --opacity-txt-ter: 0.5;
+
+  --color-link: #1aa5b2;
+  --color-link-hover: #20dbd8;
+  --color-link-active: #126c79;
+  --color-link-visited: #9a93b8;
+
+  --color-border: #a775f1;
+}
+
+/* light mode */
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg: #e0e8ff;
+    --color-fg: #ffffff;
+    --color-fg-medium: #48556a;
+    --color-fg-mute: #332c39;
+    --color-fg-highlight: #733fc8;
+
+    --box-shadow: 40px 60px 50px -47px #48556a33;
+
+    --color-highlight: #f7f9ff;
+    --color-action: #382ae1;
+    --color-action--active: #766cf1;
+
+    --color-txt-highlight: #ffffff;
+    --color-txt-light: #ffffff;
+    --color-txt-mute: #ffffff;
+    --color-txt-dark: #48556a;
+    --color-txt-footer: #48556a;
+
+    --opacity-txt-pri: 1;
+    --opacity-txt-sec: 0.7;
+    --opacity-txt-ter: 0.5;
+
+    --color-link: #1aa5b2;
+    --color-link-hover: #20dbd8;
+    --color-link-active: #126c79;
+    --color-link-visited: #9a93b8;
+
+    --color-border: #a775f1;
+  }
+}
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #404258;
+    --color-fg: #332c39;
+    --color-fg-medium: #48556a;
+    --color-fg-mute: #dbe5eb;
+    --color-fg-highlight: #733fc8;
+
+    --box-shadow: 40px 60px 50px -47px #00000031;
+
+    --color-highlight: #4d455d;
+    --color-action: #f2cd5c;
+    --color-action--active: #f0a04b;
+
+    --color-txt-highlight: #ffffff;
+    --color-txt-light: #1f2e55;
+    --color-txt-mute: #48556a;
+    --color-txt-dark: #dbe5eb;
+    --color-txt-footer: #48556a;
+
+    --opacity-txt-pri: 1;
+    --opacity-txt-sec: 0.7;
+    --opacity-txt-ter: 0.5;
+
+    --color-link: #1aa5b2;
+    --color-link-hover: #20dbd8;
+    --color-link-active: #126c79;
+    --color-link-visited: #9a93b8;
+
+    --color-border: #a775f1;
+  }
+}
+
+.dark {
+  --color-bg: #404258 !important;
+  --color-fg: #332c39 !important;
+  --color-fg-medium: #48556a !important;
+  --color-fg-mute: #dbe5eb !important;
+  --color-fg-highlight: #733fc8 !important;
+
+  --box-shadow: 40px 60px 50px -47px #00000031 !important;
+
+  --color-highlight: #4d455d !important;
+  --color-action: #f2cd5c !important;
+  --color-action--active: #f0a04b !important;
+
+  --color-txt-highlight: #ffffff !important;
+  --color-txt-light: #ffffff !important;
+  --color-txt-mute: #48556a !important;
+  --color-txt-dark: #dbe5eb !important;
+  --color-txt-footer: #dbe5eb !important;
+
+  --opacity-txt-pri: 1 !important;
+  --opacity-txt-sec: 0.7 !important;
+  --opacity-txt-ter: 0.5 !important;
+
+  --color-link: #1aa5b2 !important;
+  --color-link-hover: #20dbd8 !important;
+  --color-link-active: #126c79 !important;
+  --color-link-visited: #9a93b8 !important;
+
+  --color-border: #a775f1 !important;
+}
+
+/* Document
+========================================================================== */
+
+html {
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--color-bg);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 62.5%;
+  transition: background-color 0.15s ease-out;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  padding-block: var(--gap-m);
+  font-size: var(--text-m); /* default font size: 15px */
+  line-height: var(--height-m);
+}
+
+footer {
+  width: 100%;
+}
+
+/* Main (mobile-first)
+========================================================================== */
+
+.container {
+  display: grid;
+  gap: var(--gap-m);
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "first"
+    "second"
+    "third"
+    "fourth"
+    "fifth";
+  margin-inline: var(--gap-m);
+}
+
+.testimonial-card {
+  background-color: var(--color-fg);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--radius-m);
+  padding: var(--gap-l);
+
+  transition: background-color 0.15s ease-out;
+}
+
+.testimonial-card:first-child {
+  background-color: var(--color-fg-highlight);
+  background-image: url("../images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right var(--gap-m);
+}
+.testimonial-card:first-child > *,
+.testimonial-card:first-child > * > * {
+  color: var(--color-txt-highlight) !important;
+}
+
+.testimonial-card_jonathan {
+  background-color: var(--color-fg-medium);
+}
+.testimonial-card_jonathan > *,
+.testimonial-card_jonathan > * > * {
+  color: var(--color-txt-light) !important;
+}
+
+.testimonial-card_patrick {
+  background-color: var(--color-fg-mute);
+}
+.testimonial-card_patrick > *,
+.testimonial-card_patrick > * > * {
+  color: var(--color-txt-mute) !important;
+}
+
+.testimonial-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.testimonial-profile-image {
+  width: var(--image-width-s);
+  height: var(--image-width-s);
+  border-radius: var(--radius-round);
+  border-width: var(--border-s);
+  border-color: var(--color-border);
+  border-style: solid;
+  margin-right: var(--gap-s);
+}
+
+.testimonial-identity {
+  color: var(--color-txt-dark);
+  max-width: 50%;
+  margin: 0;
+}
+
+.testimonial-name {
+  font-weight: var(--text-medium);
+  font-size: var(--text-m);
+  line-height: var(--height-m);
+  opacity: var(--opacity-txt-pri);
+}
+
+.testimonial-designation {
+  font-weight: var(--text-medium);
+  font-size: var(--text-s);
+  line-height: var(--height-s);
+  opacity: var(--opacity-txt-ter);
+}
+
+.testimonial-heading {
+  color: var(--color-txt-dark);
+  font-weight: var(--text-semibold);
+  font-size: var(--text-l);
+  line-height: var(--height-l);
+  opacity: var(--opacity-txt-pri);
+}
+
+.testimonial-body {
+  color: var(--color-txt-dark);
+  font-weight: var(--text-medium);
+  font-size: var(--text-m);
+  line-height: var(--height-m);
+  opacity: var(--opacity-txt-sec);
+}
+
+.footer__credits {
+  color: var(--color-txt-footer);
+  text-align: center;
+
+  transition: color 0.15s ease-out;
+}
+
+.footer__credits > a:link {
+  background-color: transparent;
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+.footer__credits > a:hover {
+  background-color: transparent;
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+.footer__credits > a:active {
+  background-color: transparent;
+  color: var(--color-link-active);
+  text-decoration: underline;
+}
+
+.footer__credits > a:visited {
+  background-color: transparent;
+  color: var(--color-link-visited);
+  text-decoration: none;
+}
+
+/* Utilities
+========================================================================== */
+
+.line-clamp-parent {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Responsive
+========================================================================== */
+
+.testimonial-card:nth-child(1) {
+  grid-area: first;
+}
+.testimonial-card:nth-child(2) {
+  grid-area: second;
+}
+.testimonial-card:nth-child(3) {
+  grid-area: third;
+}
+.testimonial-card:nth-child(4) {
+  grid-area: fourth;
+}
+.testimonial-card:nth-child(5) {
+  grid-area: fifth;
+}
+
+@media only screen and (min-width: 576px) {
+  /* FIXME: reset margin inline for container */
+
+  .container {
+    grid-template-areas:
+      "first first second"
+      "fifth fifth fifth"
+      "third fourth fourth";
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* FIXME: reset margin inline for container */
+
+  .container {
+    grid-template-areas:
+      "first first second fifth"
+      "third fourth fourth fifth";
+  }
+}
