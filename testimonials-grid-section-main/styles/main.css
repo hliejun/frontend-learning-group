@@ -357,7 +357,7 @@ footer {
       "fifth fifth fifth"
       "third fourth fourth";
 
-    margin: 2.4rem;
+    margin: var(--gap-m);
   }
 }
 
@@ -368,11 +368,23 @@ footer {
       "fifth fifth fifth"
       "third fourth fourth";
 
-    margin: 5rem;
+    margin: var(--gap-l);
   }
 }
 
 @media only screen and (min-width: 1024px) {
+  .container {
+    grid-template-areas:
+      "first first first"
+      "fourth fourth fifth"
+      "second third fifth"
+      "second third fifth";
+
+    margin: 8rem;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
   .container {
     grid-template-areas:
       "first first second fifth"
