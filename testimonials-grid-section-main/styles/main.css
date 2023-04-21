@@ -59,7 +59,7 @@
 /* light mode */
 @media (prefers-color-scheme: light) {
   :root {
-    --color-bg: #e0e8ff;
+    --color-bg: #ecf2f8;
     --color-fg: #ffffff;
     --color-fg-medium: #48556a;
     --color-fg-mute: #332c39;
@@ -351,22 +351,33 @@ footer {
 }
 
 @media only screen and (min-width: 576px) {
-  /* FIXME: reset margin inline for container */
-
   .container {
     grid-template-areas:
       "first first second"
       "fifth fifth fifth"
       "third fourth fourth";
+
+    margin: 2.4rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  /* FIXME: reset margin inline for container */
+  .container {
+    grid-template-areas:
+      "first first second"
+      "fifth fifth fifth"
+      "third fourth fourth";
 
+    margin: 5rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
   .container {
     grid-template-areas:
       "first first second fifth"
       "third fourth fourth fifth";
+
+    margin: 16.5rem;
   }
 }
